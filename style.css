@@ -1,30 +1,52 @@
-/* SKILL BAR ANIMATION FIX */
+/* MOBILE RESPONSIVE DESIGN */
 
-@keyframes grow {
-from {
-width: 0;
-}
-to {
-width: 100%;
-}
+@media (max-width:768px){
+
+nav{
+flex-direction:column;
+align-items:center;
 }
 
-.skill-bar{
-background:#1e293b;
-height:10px;
-border-radius:5px;
-margin-bottom:20px;
+nav ul{
+flex-direction:column;
+gap:10px;
+padding:0;
 }
 
-.skill-level{
-height:10px;
-background:#38bdf8;
-border-radius:5px;
-animation:grow 2s forwards;
+.hero-container{
+flex-direction:column;
+text-align:center;
 }
 
-.python{width:85%;}
-.matlab{width:80%;}
-.cprog{width:75%;}
-.arduino{width:80%;}
-.biomedical{width:85%;}
+.hero-image img{
+width:150px;
+margin-top:20px;
+}
+
+.projects{
+grid-template-columns:1fr;
+}
+
+section{
+padding:40px 20px;
+}
+
+.buttons{
+display:flex;
+flex-direction:column;
+gap:10px;
+align-items:center;
+}
+
+.contact-buttons{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.contact-btn{
+width:200px;
+text-align:center;
+}
+
+}
