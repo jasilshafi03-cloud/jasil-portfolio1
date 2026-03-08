@@ -18,6 +18,19 @@ move:{enable:true,speed:2}
 
 });
 
+function openTab(event,tabName){
+
+let tabs=document.querySelectorAll(".tab-content");
+let buttons=document.querySelectorAll(".tab-button");
+
+tabs.forEach(tab=>tab.classList.remove("active"));
+buttons.forEach(btn=>btn.classList.remove("active"));
+
+document.getElementById(tabName).classList.add("active");
+event.currentTarget.classList.add("active");
+
+}
+
 const toggle=document.querySelector(".contact-toggle");
 const menu=document.querySelector(".contact-menu");
 
