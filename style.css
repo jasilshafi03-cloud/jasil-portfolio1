@@ -1,17 +1,231 @@
-/* MOBILE RESPONSIVE DESIGN */
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#0f172a,#020617);
+color:white;
+scroll-behavior:smooth;
+}
 
-@media (max-width:768px){
+#particles-js{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+z-index:-2;
+}
 
 nav{
-flex-direction:column;
-align-items:center;
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
 }
 
 nav ul{
-flex-direction:column;
-gap:10px;
-padding:0;
+display:flex;
+gap:20px;
+list-style:none;
 }
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+.logo{
+color:#38bdf8;
+}
+
+.hero{
+position:relative;
+padding:100px 20px;
+overflow:hidden;
+}
+
+.hero-container{
+display:flex;
+align-items:center;
+justify-content:space-between;
+max-width:1000px;
+margin:auto;
+}
+
+.hero-image img{
+width:220px;
+border-radius:50%;
+border:4px solid #38bdf8;
+box-shadow:0 0 20px #38bdf8;
+animation:glow 3s infinite alternate;
+}
+
+@keyframes glow{
+0%{box-shadow:0 0 10px #38bdf8;}
+100%{box-shadow:0 0 40px #38bdf8;}
+}
+
+.buttons{
+margin-top:20px;
+}
+
+.btn{
+background:#38bdf8;
+color:black;
+padding:12px 20px;
+text-decoration:none;
+border-radius:6px;
+margin-right:10px;
+}
+
+.btn2{
+border:2px solid #38bdf8;
+color:#38bdf8;
+padding:10px 20px;
+text-decoration:none;
+border-radius:6px;
+}
+
+section{
+padding:70px;
+max-width:1000px;
+margin:auto;
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.skill-bar{
+background:#1e293b;
+height:10px;
+border-radius:5px;
+margin-bottom:20px;
+}
+
+.skill-level{
+height:10px;
+background:#38bdf8;
+border-radius:5px;
+animation:grow 2s forwards;
+}
+
+.python{width:85%;}
+.matlab{width:80%;}
+.cprog{width:75%;}
+.arduino{width:80%;}
+.biomedical{width:85%;}
+
+@keyframes grow{
+from{width:0;}
+to{width:100%;}
+}
+
+.contact-buttons{
+margin-top:20px;
+}
+
+.contact-btn{
+display:inline-block;
+margin-right:15px;
+padding:12px 20px;
+border-radius:6px;
+text-decoration:none;
+background:#38bdf8;
+color:black;
+font-weight:bold;
+}
+
+.floating-contact{
+position:fixed;
+bottom:30px;
+right:30px;
+}
+
+.contact-toggle{
+background:#38bdf8;
+border:none;
+padding:12px 18px;
+border-radius:30px;
+cursor:pointer;
+}
+
+.contact-menu{
+display:none;
+flex-direction:column;
+background:#1e293b;
+margin-top:10px;
+}
+
+.contact-menu a{
+padding:10px 15px;
+text-decoration:none;
+color:white;
+}
+
+/* ECG BACKGROUND */
+
+.ecg-background{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-image: repeating-linear-gradient(
+90deg,
+transparent,
+transparent 50px,
+rgba(56,189,248,0.05) 50px,
+rgba(56,189,248,0.05) 51px
+);
+z-index:-1;
+}
+
+/* DNA ANIMATION */
+
+.dna{
+position:absolute;
+right:50px;
+top:120px;
+width:120px;
+height:200px;
+}
+
+.dna::before,
+.dna::after{
+content:"";
+position:absolute;
+width:4px;
+height:200px;
+background:#38bdf8;
+border-radius:4px;
+animation:dna-spin 4s linear infinite;
+}
+
+.dna::after{
+left:20px;
+animation-delay:2s;
+}
+
+@keyframes dna-spin{
+0%{transform:rotateX(0deg);}
+100%{transform:rotateX(360deg);}
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
 
 .hero-container{
 flex-direction:column;
@@ -25,28 +239,6 @@ margin-top:20px;
 
 .projects{
 grid-template-columns:1fr;
-}
-
-section{
-padding:40px 20px;
-}
-
-.buttons{
-display:flex;
-flex-direction:column;
-gap:10px;
-align-items:center;
-}
-
-.contact-buttons{
-display:flex;
-flex-direction:column;
-gap:10px;
-}
-
-.contact-btn{
-width:200px;
-text-align:center;
 }
 
 }
