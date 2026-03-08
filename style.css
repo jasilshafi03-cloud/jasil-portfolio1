@@ -312,3 +312,28 @@ align-items:center;
 }
 
 }
+.buttons{
+margin-top:25px;
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+}
+
+.main-btn{
+background:#38bdf8;
+color:black;
+padding:12px 22px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+transition:all 0.3s ease;
+display:inline-block;
+}
+
+.main-btn:hover{
+background:#0ea5e9;
+transform:translateY(-3px);
+box-shadow:0 0 15px rgba(56,189,248,0.7);
+}
+
+
